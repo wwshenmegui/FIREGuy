@@ -1,0 +1,63 @@
+# Godot-specific ignores
+.godot/
+*.translation
+export_presets.cfg
+.import/
+export/
+.godot/
+
+# Mono-specific ignores
+.mono/
+data_*/
+.vs/
+mono_crash.*.json
+
+# C# specific
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+*.csproj.user
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio cache/options
+.vs/
+.vscode/
+.idea/
+*.swp
+*.*~
+project.lock.json
+.DS_Store
+*.pyc
+
+# User-specific content
+*.rsuser
+
+# NuGet packages
+*.nupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+
+# Build results
+[Bb]uild/
+
+# Local history
+.localhistory/
