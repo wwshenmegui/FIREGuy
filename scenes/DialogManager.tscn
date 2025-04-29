@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dg386ae48kqw6"]
+
+[ext_resource type="Script" uid="uid://c7jb265earqy1" path="res://scripts/DialogManager.cs" id="1_6fk84"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_42xqe"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6fk84"]
+font_size = 48
+
+[node name="DialogManager" type="CanvasLayer"]
+script = ExtResource("1_6fk84")
+
+[node name="DialogPanel" type="Panel" parent="."]
+offset_left = 117.0
+offset_top = 633.0
+offset_right = 1985.0
+offset_bottom = 939.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_42xqe")
+
+[node name="DialogLabel" type="Label" parent="DialogPanel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Dialog text will appear here."
+label_settings = SubResource("LabelSettings_6fk84")

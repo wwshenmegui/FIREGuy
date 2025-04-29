@@ -8,26 +8,49 @@ public partial class Player : CharacterBody2D
 	
 	private AnimatedSprite2D _animatedSprite;
 	private string _lastDirection = "down"; // Track last direction for idle animations
+	private DialogManager _dialogManager;
+	private bool _canMove = true;
 	
 	public override void _Ready()
 	{
 		// Get reference to the AnimatedSprite2D node
 		_animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+		
+		// Get reference to the dialog manager
+		_dialogManager = GetNode<DialogManager>("/root/Level/DialogManager");
+		
+		// Connect to dialog signals
+		_dialogManager.DialogOpened += OnDialogOpened;
+		_dialogManager.DialogClosed += OnDialogClosed;
+	}
+	
+	private void OnDialogOpened()
+	{
+		_canMove = false;
+	}
+	
+	private void OnDialogClosed()
+	{
+		_canMove = true;
 	}
 	
 	public override void _PhysicsProcess(double delta)
 	{
 		Vector2 velocity = Vector2.Zero;
 		
-		// Get input direction
-		if (Input.IsActionPressed("move_right"))
-			velocity.X += 1;
-		if (Input.IsActionPressed("move_left"))
-			velocity.X -= 1;
-		if (Input.IsActionPressed("move_down"))
-			velocity.Y += 1;
-		if (Input.IsActionPressed("move_up"))
-			velocity.Y -= 1;
+		// Only process movement if the player can move
+		if (_canMove)
+		{
+			// Get input direction
+			if (Input.IsActionPressed("move_right"))
+				velocity.X += 1;
+			if (Input.IsActionPressed("move_left"))
+				velocity.X -= 1;
+			if (Input.IsActionPressed("move_down"))
+				velocity.Y += 1;
+			if (Input.IsActionPressed("move_up"))
+				velocity.Y -= 1;
+		}
 		
 		// Handle movement and animations
 		if (velocity.Length() > 0)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4oove5dke52o"
-path="res://.godot/imported/Spring Tile.png-27ca487ae619da96744b89f6dfa2c20a.ctex"
+uid="uid://bkmpvxx2i8ioo"
+path="res://.godot/imported/Sprite-0002.png-7996844a74401225945302a758631293.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Spring Tile.png"
-dest_files=["res://.godot/imported/Spring Tile.png-27ca487ae619da96744b89f6dfa2c20a.ctex"]
+source_file="res://assets/Objects/Sprite-0002.png"
+dest_files=["res://.godot/imported/Sprite-0002.png-7996844a74401225945302a758631293.ctex"]
 
 [params]
 
