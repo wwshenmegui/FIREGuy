@@ -17,7 +17,7 @@ public partial class Player : CharacterBody2D
 		_animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		
 		// Get reference to the dialog manager
-		_dialogManager = GetNode<DialogManager>("/root/Level/DialogManager");
+		_dialogManager = GetNode<DialogManager>("/root/DialogManager");
 		
 		// Connect to dialog signals
 		_dialogManager.DialogOpened += OnDialogOpened;

@@ -20,7 +20,7 @@ public partial class Interactable : Area2D
 		BodyExited += OnBodyExited;
 		
 		// Get reference to the dialog manager (autoloaded)
-		_dialogManager = GetNode<DialogManager>("/root/Level/DialogManager");
+		_dialogManager = GetNode<DialogManager>("/root/DialogManager");
 		
 		// Get reference to the interact hint label
 		_interactHintLabel = GetNode<Label>("InteractHint");

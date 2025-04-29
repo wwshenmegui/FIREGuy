@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://kntva0tgajbr"]
+[gd_scene load_steps=7 format=4 uid="uid://kntva0tgajbr"]
 
 [ext_resource type="Texture2D" uid="uid://4oove5dke52o" path="res://assets/Tiles/Spring Tile.png" id="1_6vs76"]
 [ext_resource type="PackedScene" uid="uid://lqtk363s1c0b" path="res://scenes/Player.tscn" id="2_kl8ac"]
 [ext_resource type="PackedScene" uid="uid://bq8v1eku6xk34" path="res://scenes/House.tscn" id="3_qifjx"]
 [ext_resource type="PackedScene" uid="uid://bv404ulfke6wj" path="res://scenes/Box.tscn" id="4_kl8ac"]
-[ext_resource type="PackedScene" uid="uid://dg386ae48kqw6" path="res://scenes/DialogManager.tscn" id="5_qifjx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w8frs"]
 texture = ExtResource("1_6vs76")
@@ -174,5 +173,3 @@ position = Vector2(732, 345)
 [node name="Box" parent="YSort" instance=ExtResource("4_kl8ac")]
 position = Vector2(429, 525)
 scale = Vector2(6.54755, 6.10918)
-
-[node name="DialogManager" parent="." instance=ExtResource("5_qifjx")]
